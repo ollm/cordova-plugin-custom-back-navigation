@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-custom-back-navigation",
+  "version": "0.0.1",
+  "description": "Provide custom back navigation for Android 14+",
+  "author": "Oleguer Llopart",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-plugin-custom-back-navigation",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ollm/cordova-plugin-custom-back-navigation"
+  },
+  "bugs": {
+    "url": "https://github.com/ollm/cordova-plugin-custom-back-navigation/issues"
+  },
+  "homepage": "https://github.com/ollm/cordova-plugin-custom-back-navigation#readme",
+  "keywords": [
+    "cordova",
+    "cordova-android",
+    "cordova-plugin",
+    "custom-back-navigation"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
