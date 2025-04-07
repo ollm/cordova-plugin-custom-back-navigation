@@ -1,7 +1,7 @@
 # cordova-plugin-custom-back-navigation
 
-https://github.com/user-attachments/assets/cc28fc1a-b149-4466-99d9-ff5f49e7316f
-<!-- ![cordova-plugin-custom-back-navigation](https://i.ibb.co/21qFzmdL/output-filename.webp)-->
+<!-- https://github.com/user-attachments/assets/cc28fc1a-b149-4466-99d9-ff5f49e7316f -->
+![cordova-plugin-custom-back-navigation](https://raw.githubusercontent.com/ollm/cordova-plugin-custom-back-navigation/refs/heads/main/docs/example.gif)
 
 > The `CustomBackNavigation` object offers a set of functions to manage and enhance the new [custom back navigation](https://developer.android.com/guide/navigation/custom-back/support-animations) introduced in Android 14+. It provides a greater control over back navigation behavior, facilitating smoother transitions, improved gesture handling, and better user experience.
 

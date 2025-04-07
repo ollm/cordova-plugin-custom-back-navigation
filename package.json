@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ollm/cordova-plugin-custom-back-navigation"
+    "url": "git+https://github.com/ollm/cordova-plugin-custom-back-navigation.git"
   },
   "bugs": {
     "url": "https://github.com/ollm/cordova-plugin-custom-back-navigation/issues"
@@ -26,5 +26,6 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "main": "index.js"
 }
