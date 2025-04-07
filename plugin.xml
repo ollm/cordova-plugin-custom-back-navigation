@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-custom-back-navigation" version="0.0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-custom-back-navigation" version="0.0.2">
 	<name>Cordova Plugin Custom Back Navigation</name>
 	<description>Provide custom back navigation for Android 14+</description>
 	<license>MIT</license>
