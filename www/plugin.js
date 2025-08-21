@@ -107,7 +107,7 @@ function simulateTouchend()
 
 		lastTouch.target.dispatchEvent(touchendEvent);
 	}
-	else
+	else if(!usingTouchend)
 	{
 		throw new Error('You must have executed useTouchend before');
 	}
