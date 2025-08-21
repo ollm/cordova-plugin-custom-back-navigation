@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-custom-back-navigation",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Provide custom back navigation for Android 14+",
   "author": "Oleguer Llopart",
   "license": "MIT",
