@@ -2,6 +2,9 @@ package com.ollm.cordova.plugin.custombacknavigation;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CoreAndroid;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -20,7 +23,26 @@ public class CustomBackNavigation extends CordovaPlugin {
 	private Boolean enable = false;
 
 	@Override
+	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+
+		CoreAndroid coreAndroid = (CoreAndroid) webView.getPluginManager().getPlugin("CoreAndroid");
+
+		Log.d(TAG, "initialize: instance=" + this + ", CoreAndroid=" + coreAndroid);
+
+		super.initialize(cordova, webView);
+
+		if (Build.VERSION.SDK_INT >= 33 && coreAndroid != null) { // Android 13+
+
+			Log.d(TAG, "ANTES overrideBackbutton(false)");
+			coreAndroid.overrideBackbutton(false);
+			Log.d(TAG, "DESPUÉS overrideBackbutton(false)");
+		}
+	}
+
+	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+
+		Log.d(TAG, "execute: action=" + action + ", instance=" + this);
 
 		switch (action) {
 			case "register":
@@ -78,13 +100,17 @@ public class CustomBackNavigation extends CordovaPlugin {
 				}
 			};
 
+			Log.d(TAG, "ANTES addCallback");
 			this.cordova.getActivity().getOnBackPressedDispatcher().addCallback(onBackPressedCallback);
+			Log.d(TAG, "DESPUÉS addCallback");
 		}
 	}
 
 	private void setEnabled(Boolean enable) {
 
-		Log.d(TAG, "setEnabled");
+		Log.d(TAG, "setEnabled: enable=" + enable
+        + ", callback=" + onBackPressedCallback);
+
 
 		if (onBackPressedCallback != null) {
 			onBackPressedCallback.setEnabled(enable);

@@ -20,6 +20,13 @@
 
 `cordova plugin add cordova-plugin-custom-back-navigation`
 
+> [!NOTE]
+> **Avoid conflicts with Cordova's `backbutton` event**
+>
+> Registering a `backbutton` listener may cause Cordova to intercept back navigation, interfering with the predictive back animation both when returning to the home screen and when navigating between screens.
+>
+> Use `CustomBackNavigation.register()` to handle back navigation instead, and avoid unnecessary `backbutton` listeners.
+
 ## Methods
 
 This plugin defines global `CustomBackNavigation` object.
